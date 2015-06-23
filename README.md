@@ -6,7 +6,7 @@ Adds line numbers to a source string, padding left and starting at the given off
 
 ## Example
 
-`example.js`:
+#### example.js
 
 ```js
 var addLineNumbers = require('add-line-numbers')
@@ -18,26 +18,30 @@ stdin(function (body) {
 })
 ```
 
-`test.js`:
-
-```js
-var util = require('util')
-console.log(util.isNumber(2))
-console.log("foo!")
-```
-
 Now run the following in bash:
 
 ```sh
-node example.js < test.js
+node example.js < some-file.js
 ```
 
 Resulting output:
 
 ```js
-1: var util = require('util')
-2: console.log(util.isNumber(2))
-3: console.log("foo!")
+ 1: var addLineNumbers = require('./')
+ 2: var test = require('tape')
+ 3: 
+ 4: test('adds line numbers to a source string', function (t) {
+ 5:   t.equal(addLineNumbers([
+ 6:     'one',
+ 7:     'is second'
+ 8:   ].join('\r\n')), '1: one\n2: is second', 'return carriage')
+ 9: 
+10:   t.equal(addLineNumbers([
+11:     'one',
+12:     'is second'
+13:   ].join('\n'), 0), '0: one\n1: is second', 'start offset')
+14: 
+...
 ```
 
 ## Usage
