@@ -7,5 +7,6 @@ test
 test.js
 demo/
 .npmignore
+example.js
 LICENSE.md
 tmp.js
