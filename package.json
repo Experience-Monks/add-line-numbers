@@ -1,6 +1,6 @@
 {
   "name": "add-line-numbers",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "adds line numbers to a source string",
   "main": "index.js",
   "license": "MIT",
