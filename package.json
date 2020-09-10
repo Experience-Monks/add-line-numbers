@@ -9,9 +9,6 @@
     "email": "dave.des@gmail.com",
     "url": "https://github.com/mattdesl"
   },
-  "dependencies": {
-    "pad-left": "^1.0.2"
-  },
   "devDependencies": {
     "faucet": "0.0.1",
     "get-stdin": "^4.0.1",
